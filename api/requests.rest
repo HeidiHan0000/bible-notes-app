@@ -1,0 +1,31 @@
+GET http://localhost:3000/dailynotes
+
+### 
+POST http://localhost:3000/dailynote/new
+Content-Type: application/json
+
+{
+  "bodyText": "new",
+  "category": "QT", 
+  "prayers": ["prayer1", "prayer2"]
+}
+
+###
+DELETE http://localhost:3000/dailynote/delete/63aa34992bae67717ef5b59d
+
+###
+PUT http://localhost:3000/dailynote/editBody/63aa3c40a43afaa5fd4b8910
+Content-Type: application/json
+
+{
+  "bodyText": "newText",
+  "category": "Small Group" 
+}
+###
+PUT http://localhost:3000/dailynote/addPrayers/63aa3c40a43afaa5fd4b8910
+Content-Type: application/json
+
+{
+  "prayers": ["prayer3", "prayer3","prayer3", "3"]
+
+}
